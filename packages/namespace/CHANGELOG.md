@@ -1,5 +1,15 @@
 # @computesdk/namespace
 
+## 1.6.41
+
+### Patch Changes
+
+- 28d5f17: Report a failing command's real exit code. Namespace returns exit code 1 for every failure and puts the real code in a trailing `exec failed with exit code N` stderr line, which is now stripped.
+- 11c511e: Add native `streamCommand` using Namespace's server-streaming `CommandService/RunCommand` (Connect JSON envelopes), so streaming `runCommand` (`onStdout`/`onStderr`) no longer falls back to the daemond bootstrap. Honors `timeout` (`Connect-Timeout-Ms` + client abort, exit 124), `cwd`, `env`, and `background`; a dropped stream keeps streamed output and reports exit `-1`.
+- Updated dependencies [4924af5]
+  - @computesdk/provider@2.1.22
+  - computesdk@4.1.16
+
 ## 1.6.40
 
 ### Patch Changes

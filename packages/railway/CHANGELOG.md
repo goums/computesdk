@@ -1,5 +1,13 @@
 # @computesdk/railway
 
+## 2.0.19
+
+### Patch Changes
+
+- Updated dependencies [4924af5]
+  - @computesdk/provider@2.1.22
+  - computesdk@4.1.16
+
 ## 2.0.18
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @computesdk/test-utils
 
+## 2.0.6
+
+### Patch Changes
+
+- c0c3d94: Skip the process runtime expectation when a provider suite runs against the mock sandbox (no credentials).
+- 20be5cb: Add `COMPUTESDK_REQUIRE_INTEGRATION=1`: provider, browser and storage suites fail instead of silently skipping their live tests when credentials are missing.
+- 4924af5: Background processes and streaming `runCommand` now default to a POSIX-shell process tier built on the provider's plain `runCommand` (no Node, daemon or download; works on Alpine/busybox). Order: provider-native `streamCommand`/`startProcess` hooks, then the shell tier, then daemond only with `processRuntime: 'daemond'`. Adds the `startProcess` provider hook, `instance.processRuntime`, `instance.attachProcess(jobId)`, and process-runtime coverage in the test-utils conformance suite.
+
 ## 2.0.5
 
 ### Patch Changes

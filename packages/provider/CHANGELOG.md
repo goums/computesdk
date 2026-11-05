@@ -1,5 +1,14 @@
 # @computesdk/provider
 
+## 2.1.22
+
+### Patch Changes
+
+- 4924af5: Background processes and streaming `runCommand` now default to a POSIX-shell process tier built on the provider's plain `runCommand` (no Node, daemon or download; works on Alpine/busybox). Order: provider-native `streamCommand`/`startProcess` hooks, then the shell tier, then daemond only with `processRuntime: 'daemond'`. Adds the `startProcess` provider hook, `instance.processRuntime`, `instance.attachProcess(jobId)`, and process-runtime coverage in the test-utils conformance suite.
+- Updated dependencies [4924af5]
+  - computesdk@4.1.16
+  - daemond@0.1.8
+
 ## 2.1.21
 
 ### Patch Changes

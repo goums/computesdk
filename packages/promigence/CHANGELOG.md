@@ -1,5 +1,13 @@
 # @computesdk/promigence
 
+## 1.0.9
+
+### Patch Changes
+
+- Updated dependencies [4924af5]
+  - @computesdk/provider@2.1.22
+  - computesdk@4.1.16
+
 ## 1.0.8
 
 ### Patch Changes
